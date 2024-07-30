@@ -1,0 +1,666 @@
+{
+  "common": {
+    "close": "Schließen",
+    "loading": "Wird geladen...",
+    "closing": "Wird geschlossen...",
+    "testPurposesOnly": "Nicht für klinische Zwecke",
+    "noDiagnosticUse": "Nicht für Befundung",
+    "reducedQuality": "Bildqualität reduziert",
+    "unknown": "Unbekannt",
+    "id": "ID",
+    "warning": "Warnung",
+    "tooltips": {
+      "help": "Hilfe",
+      "about": "Über DeepUnity Viewer",
+      "logout": "Abmelden",
+      "warningLowImageQuality": "Bilder werden in reduzierter Qualität dargestellt",
+      "warningMobile": "Nicht zur Befundung auf mobilen Geräten zugelassen."
+    },
+    "aboutBox": {
+      "title": "Systeminfo",
+      "version": "Version",
+      "build": "Build",
+      "thirdPartySoftware": "Verwendete Komponenten von Drittanbietern",
+      "internalSoftware": "Verwendete interne Komponenten"
+    },
+    "tabs": {
+      "search": "Patientensuche",
+      "viewer": "Viewer",
+      "administration": "Administration",
+      "studySearch": "Studiensuche",
+      "trashSearch": "Papierkorb"
+    },
+    "dicomExport": {
+      "loading": "Studien werden versendet",
+      "sendButton": "Studien versenden",
+      "modal": {
+        "title": "Studien versenden",
+        "sendButton": "Versenden",
+        "cancel": "Abbrechen",
+        "studiesLocation": "Wohin sollen die Studien versandt werden?",
+        "targetArchive": "Zielarchiv:",
+        "selectTargetArchive": "Zielarchiv auswählen",
+        "chooseStudies": "Wählen Sie die zu versendenden Studien:",
+        "allStudies": "Alle verfügbaren Studien auswählen"
+      }
+    }
+  },
+  "error": {
+    "emptySeries": {
+      "title": "Die Serie konnte nicht geladen werden",
+      "content": "Zu der angeforderten Serie gibt es derzeit noch keine Bilddaten. Probieren Sie es später noch einmal."
+    },
+    "404NoPatientData": {
+      "title": "Der Patient konnte nicht geladen werden",
+      "content": "Zu dem angeforderten Patienten gibt es derzeit noch keine Bilddaten. Probieren Sie es später noch einmal."
+    },
+    "500ServerError": {
+      "title": "Fehler beim Laden der Studien (500 - Serverfehler)",
+      "content": "Beim Versuch, die Studien zu laden, ist ein Fehler auf dem Server aufgetreten."
+    },
+    "503ServerOverloaded": {
+      "title": "Fehler beim Laden der Studien (503 - Server überlastet)",
+      "content": "Beim Versuch, die Studien zu laden, ist ein Fehler aufgetreten. Der Server ist überlastet."
+    },
+    "noListViewerPermission": {
+      "title": "Keine Berechtigung zur Patientensuche",
+      "content": "Sie besitzen nicht die benötigten Berechtigungen, um eine Patientensuche durchzuführen, und werden nun ausgeloggt."
+    },
+    "contextCallFailed": {
+      "title": "Kontextaufruf fehlgeschlagen",
+      "content": "Das übergebene Token ist ungültig."
+    },
+    "contextCallTooManyPatients": {
+      "title": "Kontextaufruf fehlgeschlagen",
+      "content": "Das Öffnen von Studien von mehr als zwei Patienten ist nicht gestattet."
+    },
+    "authFailed": {
+      "title": "Authentifizierung fehlgeschlagen",
+      "content": "Bitte überprüfen Sie die Konfiguration des Authentifizierungsservers."
+    },
+    "sessionExpired": {
+      "title": "Sitzung abgelaufen",
+      "content": "Ihre Sitzung ist abgelaufen. Bitte öffnen Sie die Studie erneut, um eine neue Sitzung zu starten."
+    },
+    "unlicensed": {
+      "title": "Lizenzfehler",
+      "content": "Die erforderliche Lizenz zur Nutzung des DU Viewers ist nicht vorhanden."
+    },
+    "invalidLicenses": {
+      "title": "Lizenzfehler",
+      "content": "Es wurden die falschen Lizenzen eingespielt."
+    },
+    "noViewingLicenses": {
+      "title": "Lizenzfehler",
+      "content": "Es sind keine Lizenzen zur Abfrage von Patientendaten vorhanden."
+    },
+    "default": {
+      "title": "Fehler beim Laden der Studien (Server nicht erreichbar)",
+      "content": "Beim Versuch, die Studien zu laden, ist ein Fehler aufgetreten. Der Server ist nicht erreichbar."
+    },
+    "serverNotAvailable": "{{serverName}} ist nicht erreichbar",
+    "okButtonLabel": "OK",
+    "viewportErrorMessage": "Daten können nicht angezeigt werden",
+    "imageLoadingError": "Bild kann nicht angezeigt werden."
+  },
+  "notification": {
+    "noImagesForLoadedStudies": "Zu den aufgerufenen Studien sind keine Bilddaten vorhanden.",
+    "notAllStudiesLoaded": "Es konnten nicht alle Studien geladen werden.",
+    "volumeAccessFailed": "Das Volumen konnte nicht geladen werden. MPR wurde beendet.",
+    "volumeLoadingFailed": "Das Volumen konnte nicht vollständig geladen werden. MPR wurde beendet.",
+    "volumeConstructionFailed": "Das Volumen konnte nicht konstruiert werden. MPR wurde beendet.",
+    "volumeSizeReduced": {
+      "message": "Das Volumen übersteigt die vom Browser darstellbare Größe und wurde daher reduziert.",
+      "sliceSpacing": "Schichtabstand: ",
+      "sliceThickness": "Schichtdicke: "
+    },
+    "snapshotSendingSuccess": "Senden des Screenshots war erfolgreich.",
+    "snapshotSendingFailed": "Screenshot konnte nicht versendet werden.",
+    "portraitMode": "Bitte verwenden Sie den Viewer nur im Querformat.",
+    "dicomExport": {
+      "success": {
+        "singleStudy": "Die Studie wurde erfolgreich versandt.",
+        "multipleStudies": "Die Studien wurden erfolgreich versandt."
+      },
+      "exportFailed": "Aufgrund technischer Probleme ist das Versenden von Studien derzeit nicht möglich.",
+      "partiallyFailed": "Es konnten nicht alle Studien erfolgreich versandt werden.",
+      "moreInfo": "Mehr Infos",
+      "summaryModal": {
+        "forbidden": "Es fehlen Berechtigungen zum Versenden der Studie.",
+        "failedRetry": "Diese Studie wurde bereits hochgeladen.",
+        "notFound": "Diese Studie existiert nicht mehr.",
+        "wrongRequestParam": "Diese Studie konnte nicht versandt werden, da die falschen Parameter übergeben wurden.",
+        "technicalIssues": "Aus technischen Gründen kann diese Studie nicht versendet werden.",
+        "title": "Fehlermeldung",
+        "successfulList": {
+          "singleStudy": "Folgende Studie konnte erfolgreich versandt werden:",
+          "multipleStudies": "Folgende Studien konnten erfolgreich versandt werden:"
+        },
+        "failedList": {
+          "singleStudy": "Folgende Studie konnte nicht versandt werden:",
+          "multipleStudies": "Folgende Studien konnten nicht versandt werden:"
+        }
+      }
+    }
+  },
+  "prompts": {
+    "enterText": "Hier Text eingeben"
+  },
+  "imageViewer": {
+    "export": {
+      "title": "Exportieren",
+      "chooseViewports": "Wählen Sie die zu exportierenden Anzeigefenster",
+      "chooseAll": "Alle auswählen",
+      "noViewportSelected": "Anzeigefenster ausgewählt",
+      "oneViewportSelected": "Anzeigefenster ausgewählt",
+      "multipleViewportsSelected": "Anzeigefenster ausgewählt",
+      "display": "Anzeigen",
+      "annotationsAndMeasurements": "Annotationen und Messungen",
+      "demographics": "Bildbeschriftungen",
+      "sendSnapshot": "Senden an: ",
+      "saveImage": "Bild speichern",
+      "printLocally": "Lokal drucken"
+    },
+    "sendSnapshot": {
+      "title": "Screenshot senden",
+      "label": "Titel",
+      "actions": {
+        "send": "Senden",
+        "cancel": "Abbrechen"
+      },
+      "successMessage": "Senden des Screenshots war erfolgreich.",
+      "errorMessage": "Screenshot konnte nicht versendet werden."
+    },
+    "dicomViewport": {
+      "emptyViewport": "LEER",
+      "demographics": {
+        "patientIdAbbr": "PID",
+        "gspsAbbr": "PR",
+        "sequenceNrAbbr": "SeqNr",
+        "imageNrAbbr": "BildNr",
+        "accessionNr": "AccNr"
+      },
+      "iconTooltips": {
+        "warningRotatedOrMirrored": "Bild wurde gedreht oder gespiegelt",
+        "warningLinkingFallback": "Nur bildweise Synchronisation",
+        "warningGspsNotApplicable": "W/L des PR ist inkonsistent",
+        "warningLossyImage": "Bild ist verlustbehaftet",
+        "undoLinkingTooltip": "Synchronisation ausschalten",
+        "secondaryCaptureImageTooltip": "Secondary Capture",
+        "warningProcessingOnly": "Nur zur Verarbeitung"
+      },
+      "cineMode": {
+        "warningFrameRate": "Geschwindigkeit ist geringer als erwartet",
+        "frameRateTooltip": "Geschwindigkeit"
+      }
+    },
+    "wsiViewport": {
+      "iconTooltips": {
+        "warningFluorescence": "Nicht für Befundung"
+      }
+    },
+    "dicom3dViewport": {
+      "demographics": {
+        "mprMode": "Modus",
+        "mprThickness": "Schichtdicke"
+      },
+      "iconTooltips": {
+        "maximizeVolumeTooltip": "Maximieren",
+        "minimizeVolumeTooltip": "Zur Originalansicht"
+      }
+    },
+    "videoViewport": {
+      "noBrowserSupport": "Ihr Browser unterstützt leider keine HTML Videos."
+    },
+    "patientToolbar": {
+      "multiplePatientsDisplayed": "Es werden mehrere Patienten angezeigt.",
+      "attention": "Achtung!",
+      "name": "Name",
+      "dateOfBirth": "Geburtsdatum",
+      "qualitySwitchLabel": "DICOM"
+    },
+    "sidebar": {
+      "tabImages": "Studien",
+      "tabDocuments": "Dokumente"
+    },
+    "seriesPalette": {
+      "noThumbnail": "Es sind keine Bilder vorhanden.",
+      "tooltips": {
+        "expand": "Serienpalette einblenden",
+        "collapse": "Serienpalette ausblenden",
+        "firstReader": "Gesehen von {{userName}} am {{date}} um {{time}}"
+      }
+    },
+    "reportViewport": {
+      "loadingError": "Ladefehler",
+      "tooltips": {
+        "hideReport": "Befund ausblenden"
+      }
+    },
+    "topToolbar": {
+      "tooltips": {
+        "wlPresets": "Standardfensterwerte wählen",
+        "rotate": "Rotieren oder Spiegeln",
+        "revert": "Spezifische Bildänderungen zurücksetzen",
+        "pan": "Verschieben (Leertaste + linke Maustaste)",
+        "zoom": "Zoomen (Leertaste + Mausrad)",
+        "zoomPan": "Zoomen und Verschieben",
+        "windowLevel": "Fensterung (rechte Maustaste)",
+        "invert": "Invertieren",
+        "rotateFree": "Frei rotieren",
+        "rotateC90": "90° im Uhrzeigersinn rotieren",
+        "rotateCC90": "90° gegen den Uhrzeigersinn rotieren",
+        "rotateC180": "180° rotieren",
+        "mirrorHorizontal": "Horizontal spiegeln",
+        "mirrorVertical": "Vertikal spiegeln",
+        "revertAll": "Alle Bildänderungen zurücksetzen",
+        "revertPanZoom": "Verschieben oder Zoomen zurücksetzen",
+        "revertWLInvert": "Fensterung oder Invertieren zurücksetzen",
+        "revertRotateMirror": "Rotation oder Spiegeln zurücksetzen",
+        "text": "Text",
+        "arrow": "Pfeil",
+        "length": "Distanzmessung",
+        "cobbAngle": "Winkelmessung",
+        "rectangle": "Rechteck",
+        "circle": "Kreis",
+        "count": "Zähler",
+        "freehand": "Freihand",
+        "polygon": "Polygon",
+        "wlPresetT1": "C/W 300/700",
+        "wlPresetT2": "C/W 155/475",
+        "wlPresetPD": "C/W 420/920",
+        "wlPresetSoft": "C/W 50/350",
+        "wlPresetBone": "C/W 400/1800",
+        "wlPresetLung": "C/W -500/1500",
+        "wlPresetSkullBrain": "C/W 40/80",
+        "wlPresetSkullBase": "C/W 40/1800",
+        "wlPresetLiver": "C/W 40/150",
+        "link": "Serien synchronisieren",
+        "mpr": "Multiplanare Rekonstruktion",
+        "export": "Export",
+        "keyImages": "Key Images",
+        "layouts": {
+          "dropdown": "Anzeige-Layouts",
+          "2D-1x1": "Anzeige-Layout 1x1",
+          "2D-2x1": "Anzeige-Layout 2x1",
+          "2D-1x2": "Anzeige-Layout 1x2",
+          "2D-2x2": "Anzeige-Layout 2x2",
+          "2D-H2/1": "Anzeige-Layout H2/1",
+          "2D-H1/2": "Anzeige-Layout H1/2",
+          "2D-V2/1": "Anzeige-Layout V2/1",
+          "2D-V1/2": "Anzeige-Layout V1/2"
+        },
+        "toggleVisibility": "Ein- oder Ausblenden",
+        "ecg": {
+          "ecgMeasurement": "EKG Messwerkzeug",
+          "rrMeasurement": "R2R Werkzeug",
+          "ecgHeart": "EKG Einstellungen",
+          "ecgSetting": {
+            "layout": "Layout",
+            "timeResolution": "Zeitskala",
+            "voltage": "Spannungsskala",
+            "frequency": "Filterfrequenz"
+          }
+        },
+        "nextSeries": "Nächste Serie (Strg + Pfeil rechts)",
+        "previousSeries": "Vorherige Serie (Strg + Pfeil links)"
+      },
+      "labels": {
+        "wlPresetT1": "T1",
+        "wlPresetT2": "T2",
+        "wlPresetPD": "PD",
+        "wlPresetSoft": "Weichteil",
+        "wlPresetBone": "Knochen",
+        "wlPresetLung": "Lunge",
+        "wlPresetSkullBrain": "Schädel-Hirn",
+        "wlPresetSkullBase": "Schädelbasis",
+        "wlPresetLiver": "Leber",
+        "localizers": "Localizer",
+        "demographics": "Bildbeschriftung",
+        "cineSlider": "Cine-Leiste",
+        "ruler": "Lineal",
+        "ecgReport": "EKG Auswertung",
+        "annotations": "Annotationen",
+        "annotationsUncertainties": "Messungenauigkeiten",
+        "mprMode": "Modus",
+        "mprThickness": "Dicke",
+        "mprLayout": "Layout",
+        "mprWith3D": "Mit 3D",
+        "mprWithout3D": "Ohne 3D",
+        "mpr3DProjection": "Projektion",
+        "3dClipping": {
+          "label": "Clipping",
+          "none": "Aus",
+          "sphere": "Kugel",
+          "box": "Box"
+        },
+        "3dTransferfunctions": {
+          "dropdownLabel": "Transferfunktion",
+          "default_ct": "Standard (CT)",
+          "bones": "Knochen",
+          "vessels": "Gefäße",
+          "skull": "Schädel",
+          "lung": "Lunge",
+          "soft": "Weichgewebe"
+        },
+        "crosshair": "Fadenkreuz",
+        "wsiOverview": "WSI-Überblick",
+        "wsiTracking": "WSI-Tracking",
+        "wsiNavigationMap": "WSI-Übersichtskarte"
+      }
+    },
+    "presentationStates": {
+      "presentationStates": "Presentation States",
+      "showOriginal": "Original",
+      "createPresentationState": "Presentation State erstellen",
+      "deletePresentationStateTitle": "Presentation State löschen",
+      "deletePresentationStateContent": "Sind Sie sicher, dass Sie den Presentation State {{presentationStateTitle}} löschen wollen?",
+      "title": "Neuen Presentation State erstellen",
+      "actions": {
+        "save": "Speichern",
+        "cancel": "Abbrechen",
+        "delete": "Löschen"
+      },
+      "label": "Titel",
+      "errorMessage": "Bitte geben Sie einen Titel an",
+      "saveSuccess": "Der Presentation State wurde erfolgreich erstellt.",
+      "saveError": "Der Presentation State konnte nicht erstellt werden.",
+      "deleteSuccess": "Der Presentation State wurde gelöscht",
+      "deleteError": "Der Presentation State konnte nicht gelöscht werden"
+    },
+    "wsiOverview": {
+      "label": "Label",
+      "macro": "Makro",
+      "annotationGroups": "Annotationen",
+      "defaultLayer": "Unbenannt",
+      "annotationGroupsActions": {
+        "addLayer": "Neue Gruppe hinzufügen",
+        "saveLayer": "Gruppe speichern",
+        "deleteLayer": "Gruppe löschen",
+        "exitEditing": "Abbrechen",
+        "noLayers": "Es gibt zurzeit keine Annotationsgruppen.",
+        "edit": "Gruppe bearbeiten"
+      },
+      "fluorescence": "Fluoreszenz",
+      "fluorescenceChannels": {
+        "illuminationWavelenght": "Beleuchtungswellenlänge:",
+        "nanometers": "nm",
+        "maxValue": "Max",
+        "minValue": "Min",
+        "valuesOfInterest": "Interessenswerte",
+        "opacity": "Deckkraft",
+        "saveChannel": "Kanal speichern",
+        "revertChannel": "Kanal zurücksetzen",
+        "exitEditing": "Abbrechen",
+        "edit": "Kanal bearbeiten"
+      },
+
+      "rotateRight": "90° im Uhrzeigersinn rotieren",
+      "rotateLeft": "90° gegen den Uhrzeigersinn rotieren",
+      "zoomInOut": "Vergrößern/verkleinern",
+      "measurementAbbreviations": {
+        "area": "A:",
+        "diameter": "d:",
+        "perimeter": "U:"
+      }
+    }
+  },
+  "listViewer": {
+    "searchBox": {
+      "nameOrPid": {
+        "placeholder": "Name oder PID"
+      },
+      "dateOfBirth": {
+        "placeholder": "Geburtsdatum"
+      },
+      "modalities": {
+        "allModalities": "Alle Modalitäten",
+        "oneModality": "Modalität",
+        "multipleModalities": "Modalitäten"
+      },
+      "archives": {
+        "allArchives": "Alle Archive",
+        "oneArchive": "Archiv",
+        "multipleArchives": "Archive"
+      },
+      "callingAET": {
+        "allCallingAET": "Alle Calling AET",
+        "oneCallingAET": "Calling AET",
+        "multipleCallingAET": "Calling AET"
+      },
+      "date": {
+        "placeholder": {
+          "studyDate": "Studiendatum",
+          "deletionDate": "Löschdatum",
+          "fromDate": "Von",
+          "toDate": "Bis"
+        },
+        "today": "Heute",
+        "last7Days": "Letzte 7 Tage",
+        "last30Days": "Letzte 30 Tage"
+      },
+      "search": "Suchen",
+      "issuer": {
+        "placeholder": "Aussteller der PID"
+      },
+      "studyInstanceUID": {
+        "placeholder": "Studien-UID"
+      },
+      "accessionNumber": {
+        "placeholder": "Accession Number"
+      },
+      "studiesSelect": {
+        "allStudies": "Alle Studien",
+        "unlinkedStudies": "Unverknüpfte Studien",
+        "deletionLockStudies": "Studien mit Lösch-Sperre"
+      }
+    },
+    "searchFilter": {
+      "searchFor": "Suche nach",
+      "resetFilters": "Alle Suchfilter zurücksetzen",
+      "results": {
+        "noResult": "Ergebnisse",
+        "oneResult": "Ergebnis",
+        "multipleResults": "Ergebnisse"
+      },
+      "badges": {
+        "patient": "Patient",
+        "dateOfBirth": "Geburtsdatum",
+        "studyDate": "Studiendatum",
+        "modality": "Modalität",
+        "archive": "Archiv",
+        "studyInstanceUID": "Studien-UID",
+        "accessionNumber": "Accession Number",
+        "callingAET": "Calling AET",
+        "issuerOfPatientID": "Aussteller der PID",
+        "studies": "Studien",
+        "deletionDate": "Löschdatum"
+      },
+      "deletedResults": {
+        "noResult": "gelöschte Studien",
+        "oneResult": "gelöschte Studie",
+        "multipleResults": "gelöschte Studien"
+      }
+    },
+    "searchResults": {
+      "noPatientsFound": {
+        "title": "Keine Patientendaten verfügbar",
+        "content": "Es konnten leider keine Patienten zu Ihren Suchkriterien gefunden werden."
+      },
+      "nothingToShow": {
+        "title": "Nichts angezeigt",
+        "content": "Schicken Sie eine Suchanfrage ab, um Patienten anzuzeigen."
+      },
+      "oneAdditionalStudy": "weitere Studie",
+      "multipleAdditionalStudies": "weitere Studien",
+      "oneAdditionalDocument": "weiteres Dokument",
+      "multipleAdditionalDocuments": "weitere Dokumente",
+      "studyBadge": "Studien",
+      "documentBadge": "Dokumente",
+      "administerStudie": "Studie administrieren",
+      "deleteStudy": "Studie löschen",
+      "restoreStudy": "Studie wiederherstellen",
+      "deletePermanently": "Studie dauerhaft löschen",
+      "noSearchResults": "Zu diesem Patienten sind keine für den Viewer freigegebenen Dokumente verfügbar.",
+      "accNrShort": "AccNr"
+    },
+    "studyActionBar": {
+      "selectAllSearchResultsOfMalePatient": "Alle Ergebnisse des Patienten auswählen",
+      "selectAllSearchResultsOfFemalePatient": "Alle Ergebnisse der Patientin auswählen",
+      "selectAllSearchResultsOfUnknownGenderPatient": "Alle Ergebnisse des Patienten / der Patientin auswählen",
+      "selectAllSearchResultsOfMultiplePatients": "Alle Ergebnisse der Patienten auswählen",
+      "oneStudyCount": "Studie",
+      "multipleStudiesCount": "Studien",
+      "oneDocumentCount": "Dokument",
+      "multipleDocumentsCount": "Dokumente",
+      "oneSelected": "ausgewählt",
+      "multipleSelected": "ausgewählt",
+      "shareStudies": "Studien freigeben",
+      "view": "Anzeigen",
+      "addToViewer": "Zum Viewer hinzufügen"
+    },
+    "trashActionBar": {
+      "emptyTrash": "Papierkorb löschen",
+      "restore": "Wiederherstellen",
+      "deletePermanently": "Dauerhaft löschen",
+      "selectAllSearchResultsOfMalePatient": "Alle Ergebnisse des Patienten auswählen",
+      "selectAllSearchResultsOfFemalePatient": "Alle Ergebnisse der Patientin auswählen",
+      "selectAllSearchResultsOfUnknownGenderPatient": "Alle Ergebnisse des Patienten / der Patientin auswählen",
+      "selectAllSearchResultsOfMultiplePatients": "Alle Ergebnisse der Patienten auswählen",
+      "oneStudyCount": "Studie",
+      "multipleStudiesCount": "Studien",
+      "oneSelected": "ausgewählt",
+      "multipleSelected": "ausgewählt"
+    },
+    "shareStudies": {
+      "confirmation": {
+        "title": "Studien in der Patient XCare Suite freigeben?",
+        "accept": "Freigeben",
+        "cancel": "Abbrechen",
+        "contentMultipleStudies": "Sind Sie sicher, dass Sie diese {{numberOfStudies}} Studien in der Patient XCare Suite freigeben wollen?",
+        "contentSingleStudy": "Sind Sie sicher, dass Sie diese 1 Studie in der Patient XCare Suite freigeben wollen?"
+      },
+      "response": {
+        "success": "Die Studien wurden erfolgreich freigegeben.",
+        "error": "Aufgrund technischer Probleme ist die Studienfreigabe derzeit nicht möglich.",
+        "patientNotFound": "Die Studien konnten nicht freigegeben werden, da der Patient / die Patientin nicht in der Patient XCare Suite gefunden wurde.",
+        "partial": {
+          "title": "Es konnten nicht alle Studien freigegeben werden",
+          "successOneStudy": "Folgende Studie konnte erfolgreich freigegeben werden:",
+          "successMultipleStudies": "Folgende Studien konnten erfolgreich freigegeben werden:",
+          "errorOneStudy": "Folgende Studie konnte nicht freigegeben werden:",
+          "errorMultipleStudies": "Folgende Studien konnten nicht freigegeben werden:",
+          "fromDate": "vom",
+          "close": "Schließen"
+        }
+      }
+    },
+    "deleteStudy": {
+      "response": {
+        "success": "Die Studie wurde in den Papierkorb verschoben.",
+        "error": "Die Studie konnte nicht in den Papierkorb verschoben werden.",
+        "notFound": "Die Studie konnte nicht in den Papierkorb verschoben werden, weil sie nicht gefunden wurde.",
+        "forbidden": "Sie haben nicht die Berechtigung, diese Studie in den Papierkorb zu verschieben."
+      }
+    },
+    "restoreStudy": {
+      "confirmation": {
+        "title": {
+          "singleStudy": "Studie wiederherstellen?",
+          "multipleStudies": "Studien wiederherstellen?"
+        },
+        "accept": "Wiederherstellen",
+        "cancel": "Abbrechen",
+        "content": {
+          "singleStudy": "Möchten Sie die Studie wiederherstellen?",
+          "multipleStudies": "Möchten Sie die Studien wiederherstellen?"
+        }
+      },
+      "response": {
+        "success": {
+          "singleStudy": "Die Studie wurde erfolgreich wiederhergestellt.",
+          "multipleStudies": "Die Studien wurden erfolgreich wiederhergestellt."
+        },
+        "error": {
+          "singleStudy": "Die Studie konnte nicht wiederhergestellt werden.",
+          "multipleStudies": "Die Studien konnten nicht wiederhergestellt werden."
+        }
+      }
+    },
+    "emptyTrash": {
+      "confirmation": {
+        "title": "Studien löschen?",
+        "accept": "Löschen",
+        "cancel": "Abbrechen",
+        "content": "Möchten Sie alle Studien im Papierkorb dauerhaft löschen?"
+      },
+      "response": {
+        "success": "Alle Studien im Papierkorb wurden dauerhaft gelöscht.",
+        "error": "Die Studien im Papierkorb konnten nicht gelöscht werden."
+      }
+    },
+    "deletePermanently": {
+      "confirmation": {
+        "title": {
+          "singleStudy": "Studie dauerhaft löschen?",
+          "multipleStudies": "Studien dauerhaft löschen?"
+        },
+        "accept": "Löschen",
+        "cancel": "Abbrechen",
+        "content": {
+          "singleStudy": "Möchten Sie die Studie dauerhaft löschen?",
+          "multipleStudies": "Möchten Sie die Studien dauerhaft löschen?"
+        }
+      },
+      "response": {
+        "success": {
+          "singleStudy": "Die Studie wurde dauerhaft gelöscht.",
+          "multipleStudies": "Die Studien wurden dauerhaft gelöscht."
+        },
+        "error": {
+          "singleStudy": "Die Studie konnte nicht gelöscht werden.",
+          "multipleStudies": "Die Studien konnten nicht gelöscht werden."
+        }
+      }
+    },
+    "patientMerge": {
+      "mergeConfirmation": {
+        "title": "Temporäre Patientenzusammenführung",
+        "content": "Möchten Sie die ausgewählten Studien temporär zusammenführen?",
+        "actions": {
+          "confirm": "Zusammenführen",
+          "cancel": "Abbrechen"
+        }
+      },
+      "addContentConfirmation": {
+        "title": "Temporäre Patientenzusammenführung",
+        "contentOneStudy": "Möchten Sie die ausgewählte Studie temporär dem bereits geladenen Patienten hinzufügen?",
+        "contentMultipleStudies": "Möchten Sie die ausgewählten Studien temporär dem bereits geladenen Patienten hinzufügen?",
+        "actions": {
+          "confirm": "Hinzufügen",
+          "cancel": "Abbrechen"
+        }
+      }
+    },
+    "chatbot": {
+      "initialMessage": "Fragen zum DeepUnity Viewer"
+    }
+  },
+  "administration": {
+    "navigationModal": {
+      "title": "Administration verlassen?",
+      "content": "Wenn Sie den Administrationsbereich verlassen, gehen nicht gespeicherte Änderungen verloren.",
+      "actions": {
+        "abandon": "Verlassen",
+        "cancel": "Abbrechen"
+      }
+    },
+    "deletionModal": {
+      "title": "Die Studie wurde gelöscht",
+      "content": "Die von Ihnen geöffnete Studie wurde gelöscht. Sie werden nun zur Studiensuche weitergeleitet.",
+      "actions": {
+        "confirm": "OK"
+      }
+    }
+  }
+}

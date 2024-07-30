@@ -1,0 +1,665 @@
+{
+  "common": {
+    "close": "Fermer",
+    "loading": "Chargement en cours...",
+    "closing": "Fermeture en cours....",
+    "testPurposesOnly": "Ne pas utiliser à des fins cliniques",
+    "noDiagnosticUse": "Ne pas utiliser pour le diagnostic",
+    "reducedQuality": "L'image est avec perte",
+    "unknown": "Inconnu",
+    "id": "ID",
+    "warning": "Avertissement",
+    "tooltips": {
+      "help": "Aide",
+      "about": "À propos de DeepUnity Viewer",
+      "logout": "Se déconnecter",
+      "warningLowImageQuality": "Les images sont affichées en qualité réduite",
+      "warningMobile": "Non autorisé pour l'interprétation des résultats sur des appareils mobiles."
+    },
+    "aboutBox": {
+      "title": "Informations système",
+      "version": "Version",
+      "build": "Build",
+      "thirdPartySoftware": "Composants intégrés de fournisseurs tiers",
+      "internalSoftware": "Composants internes"
+    },
+    "tabs": {
+      "search": "Recherche",
+      "viewer": "Viewer",
+      "administration": "Administration",
+      "studySearch": "Recherche",
+      "trashSearch": "Corbeille"
+    },
+    "dicomExport": {
+      "loading": "Les examens sont en cours d'envoi",
+      "sendButton": "Envoyer les examens",
+      "modal": {
+        "title": "Envoyer les examens",
+        "sendButton": "Envoyer",
+        "cancel": "Annuler",
+        "studiesLocation": "Où souhaitez-vous envoyer les examens ?",
+        "targetArchive": "Archive de destination :",
+        "selectTargetArchive": "Sélectionner l'archive de destination",
+        "chooseStudies": "Sélectionner les examens à envoyer :",
+        "allStudies": "Sélectionner tous les examens disponibles"
+      }
+    }
+  },
+  "error": {
+    "emptySeries": {
+      "title": "La série n'a pas pu être chargée",
+      "content": "Il n'existe actuellement aucune donnée image pour la série demandée. Réessayez ultérieurement."
+    },
+    "404NoPatientData": {
+      "title": "Le patient n'a pas pu être chargé",
+      "content": "Il n'existe encore aucune donnée image associée au patient souhaité. Veuillez réessayer plus tard."
+    },
+    "500ServerError": {
+      "title": "Erreur lors du chargement des examens (500 – erreur serveur)",
+      "content": "Une erreur s'est produite sur le serveur lors du chargement des examens."
+    },
+    "503ServerOverloaded": {
+      "title": "Erreur lors du chargement des examens (503 – serveur surchargé)",
+      "content": "Une erreur s'est produite lors du chargement des examens. Le serveur est surchargé."
+    },
+    "noListViewerPermission": {
+      "title": "Pas d'autorisation pour la recherche de patients",
+      "content": "Vous ne disposez pas des autorisations nécessaires pour effectuer une recherche de patients. Par conséquent, votre session sera déconnectée."
+    },
+    "contextCallFailed": {
+      "title": "Échec de la récupération du contexte",
+      "content": "L'identifiant de session fourni est invalide."
+    },
+    "contextCallTooManyPatients": {
+      "title": "Échec de l'appel contextuel",
+      "content": "L'ouverture d'examens de plus de deux patients n'est pas autorisée."
+    },
+    "authFailed": {
+      "title": "Échec de l'authentification",
+      "content": "Veuillez vérifier la configuration du serveur d'authentification."
+    },
+    "sessionExpired": {
+      "title": "La session a expiré",
+      "content": "Votre session a expiré. Ouvrez à nouveau l'examen pour démarrer une nouvelle session."
+    },
+    "unlicensed": {
+      "title": "Erreur de licence",
+      "content": "La licence nécessaire à l'utilisation du DU Viewer n'est pas disponible."
+    },
+    "invalidLicenses": {
+      "title": "Erreur de licence",
+      "content": "Des mauvaises licences ont été installées."
+    },
+    "noViewingLicenses": {
+      "title": "Erreur de licence",
+      "content": "Aucune licence n'est disponible pour la consultation des données des patients."
+    },
+    "default": {
+      "title": "Erreur lors du chargement des examens (serveur inaccessible)",
+      "content": "Une erreur s'est produite lors du chargement des examens. Le serveur n'est pas accessible."
+    },
+    "serverNotAvailable": "{{serverName}} n'est pas accessible",
+    "okButtonLabel": "Ok",
+    "viewportErrorMessage": "Les données ne peuvent pas être affichées",
+    "imageLoadingError": "L'image ne peut pas être affichée."
+  },
+  "notification": {
+    "noImagesForLoadedStudies": "Il n'existe aucune donnée image associée aux examens chargés.",
+    "notAllStudiesLoaded": "Un ou plusieurs examens n'a/n'ont pas pu être chargé(s).",
+    "volumeAccessFailed": "Le volume n'a pas pu être chargé. La présentation MPR a été arrêtée.",
+    "volumeLoadingFailed": "Le volume n'a pas pu être chargé complètement. La présentation MPR a été arrêtée.",
+    "volumeConstructionFailed": "Le volume n'a pas pu être construit. La présentation MPR a été arrêtée.",
+    "volumeSizeReduced": {
+      "message": "La taille du volume a été réduite car elle dépassait celle pouvant être affichée dans le navigateur.",
+      "sliceSpacing": "Espaceinter coupe ",
+      "sliceThickness": "Épaisseur de coupe "
+    },
+    "snapshotSendingSuccess": "L'envoi de la capture d'écran a réussi.",
+    "snapshotSendingFailed": "La capture d'écran n'a pas pu être envoyée.",
+    "portraitMode": "Veuillez utiliser la visionneuse uniquement en mode paysage.",
+    "dicomExport": {
+      "success": {
+        "singleStudy": "L'examen a été envoyé avec succès.",
+        "multipleStudies": "Les examens ont été envoyés avec succès."
+      },
+      "exportFailed": "En raison de problèmes techniques, l'envoi d'examens n'est actuellement pas possible.",
+      "partiallyFailed": "Un ou plusieurs examens n'a/n'ont pas pu être envoyé(s).",
+      "moreInfo": "Plus d'infos",
+      "summaryModal": {
+        "forbidden": "Il manque des autorisations pour envoyer l'examen.",
+        "failedRetry": "Cet examen a déjà été téléchargé.",
+        "notFound": "Cet examen n'existe plus.",
+        "wrongRequestParam": "Cet examen n'a pas pu être envoyé car les mauvais paramètres ont été transmis.",
+        "technicalIssues": "Pour des raisons techniques, cet examen ne peut pas être envoyé.",
+        "title": "Message d'erreur",
+        "successfulList": {
+          "singleStudy": "L'examen suivant a pu être envoyé avec succès :",
+          "multipleStudies": "Les examens suivants ont pu être envoyés avec succès :"
+        },
+        "failedList": {
+          "singleStudy": "L'examen suivant n'a pas pu être envoyé :",
+          "multipleStudies": "Les examens suivants n'ont pas pu être envoyés :"
+        }
+      }
+    }
+  },
+  "prompts": {
+    "enterText": "Saisissez du texte ici"
+  },
+  "imageViewer": {
+    "export": {
+      "title": "Exporter",
+      "chooseViewports": "Sélectionnez les fenêtres d'affichage à exporter",
+      "chooseAll": "Tout sélectionner",
+      "noViewportSelected": "fenêtre d'affichage sélectionnée",
+      "oneViewportSelected": "fenêtre d'affichage sélectionnée",
+      "multipleViewportsSelected": "fenêtres d'affichage sélectionnées",
+      "display": "Afficher",
+      "annotationsAndMeasurements": "Annotations et mesures",
+      "demographics": "Libellés d'image",
+      "sendSnapshot": "Envoyer à : ",
+      "saveImage": "Sauvegarder l'image",
+      "printLocally": "Impression locale"
+    },
+    "sendSnapshot": {
+      "title": "Envoyer la capture d'écran",
+      "label": "Titre",
+      "actions": {
+        "send": "Envoyer",
+        "cancel": "Annuler"
+      },
+      "successMessage": "L'envoi de la capture d'écran a réussi.",
+      "errorMessage": "La capture d'écran n'a pas pu être envoyée."
+    },
+    "dicomViewport": {
+      "emptyViewport": "VIDE",
+      "demographics": {
+        "patientIdAbbr": "IPP",
+        "gspsAbbr": "PR",
+        "sequenceNrAbbr": "SE",
+        "imageNrAbbr": "IM",
+        "accessionNr": "AccNr"
+      },
+      "iconTooltips": {
+        "warningRotatedOrMirrored": "L'image a été pivotée / retournée",
+        "warningLinkingFallback": "Synchronisation par image uniquement",
+        "warningGspsNotApplicable": "Fenêtrage incohérent pour PR",
+        "warningLossyImage": "L'image est avec perte.",
+        "undoLinkingTooltip": "Désactiver la synchronisation",
+        "secondaryCaptureImageTooltip": "Capture secondaire",
+        "warningProcessingOnly": "Uniquement pour le traitement"
+      },
+      "cineMode": {
+        "warningFrameRate": "La vitesse est plus faible que prévue",
+        "frameRateTooltip": "Vitesse"
+      }
+    },
+    "wsiViewport": {
+      "iconTooltips": {
+        "warningFluorescence": "Ne pas utiliser pour le diagnostic"
+      }
+    },
+    "dicom3dViewport": {
+      "demographics": {
+        "mprMode": "Mode",
+        "mprThickness": "Épaisseur de coupe"
+      },
+      "iconTooltips": {
+        "maximizeVolumeTooltip": "Agrandir",
+        "minimizeVolumeTooltip": "Retour à la vue d'origine"
+      }
+    },
+    "videoViewport": {
+      "noBrowserSupport": "Désolé, votre navigateur ne supporte pas les vidéos HTML."
+    },
+    "patientToolbar": {
+      "multiplePatientsDisplayed": "Plusieurs patients seront affichés.",
+      "attention": "Attention !",
+      "name": "Nom",
+      "dateOfBirth": "Date de naissance",
+      "qualitySwitchLabel": "DICOM"
+    },
+    "sidebar": {
+      "tabImages": "Examens",
+      "tabDocuments": "Documents"
+    },
+    "seriesPalette": {
+      "noThumbnail": "Aucune image disponible.",
+      "tooltips": {
+        "expand": "Afficher la palette de séries",
+        "collapse": "Masquer la palette de séries",
+        "firstReader": "Vu par {{userName}} le {{date}} à {{time}}"
+      }
+    },
+    "reportViewport": {
+      "loadingError": "Erreur de chargement",
+      "tooltips": {
+        "hideReport": "Masquer le compte-rendu"
+      }
+    },
+    "topToolbar": {
+      "tooltips": {
+        "wlPresets": "Définir les valeurs de fenêtrage par défaut",
+        "rotate": "Rotation / miroir",
+        "revert": "Annuler les modifications spécifiques dans l'image",
+        "pan": "Déplacer (barre d'espace + bouton gauche de la souris)",
+        "zoom": "Zoom (barre d'espace + molette de la souris)",
+        "zoomPan": "Zoom et déplacer",
+        "windowLevel": "Fenêtrage (bouton droit de la souris)",
+        "invert": "Inverser",
+        "rotateFree": "Rotation libre",
+        "rotateC90": "Faire pivoter de 90° dans le sens horaire",
+        "rotateCC90": "Faire pivoter de 90° dans le sens anti-horaire",
+        "rotateC180": "Faire pivoter de 180°",
+        "mirrorHorizontal": "Retourner horizontalement",
+        "mirrorVertical": "Retourner verticalement",
+        "revertAll": "Annuler toutes les modifications dans l'image",
+        "revertPanZoom": "Annuler le déplacement / zoom",
+        "revertWLInvert": "Annuler le fenêtrage / l'inversion",
+        "revertRotateMirror": "Annuler la rotation / l'effet miroir",
+        "text": "Texte",
+        "arrow": "Flèche",
+        "length": "Mesure de distance",
+        "cobbAngle": "Mesure d'angle",
+        "rectangle": "Rectangle",
+        "circle": "Cercle",
+        "count": "Compter",
+        "freehand": "Main libre",
+        "polygon": "Polygone",
+        "wlPresetT1": "C/W 300/700",
+        "wlPresetT2": "C/W 155/475",
+        "wlPresetPD": "C/W 420/920",
+        "wlPresetSoft": "C/W 50/350",
+        "wlPresetBone": "C/W 400/1800",
+        "wlPresetLung": "C/W -500/1500",
+        "wlPresetSkullBrain": "C/W 40/80",
+        "wlPresetSkullBase": "C/W 40/1800",
+        "wlPresetLiver": "C/W 40/150",
+        "link": "Synchroniser les séries",
+        "mpr": "Reconstruction multiplanaire",
+        "export": "Exporter",
+        "keyImages": "Images clés",
+        "layouts": {
+          "dropdown": "Dispositions d'affichage",
+          "2D-1x1": "Disposition d'affichage 1x1",
+          "2D-2x1": "Disposition d'affichage 2x1",
+          "2D-1x2": "Disposition d'affichage 1x2",
+          "2D-2x2": "Disposition d'affichage 2x2",
+          "2D-H2/1": "Disposition d'affichage H2/1",
+          "2D-H1/2": "Disposition d'affichage H1/2",
+          "2D-V2/1": "Disposition d'affichage V2/1",
+          "2D-V1/2": "Disposition d'affichage V1/2"
+        },
+        "toggleVisibility": "Afficher/masquer",
+        "ecg": {
+          "ecgMeasurement": "Outil de mesure de l'ECG",
+          "rrMeasurement": "Mesures R-R",
+          "ecgHeart": "Paramètres de l'ECG",
+          "ecgSetting": {
+            "layout": "Disposition",
+            "timeResolution": "Temps",
+            "voltage": "Tension",
+            "frequency": "Fréquence du filtre"
+          }
+        },
+        "nextSeries": "Série suivante (Ctrl + flèche droite)",
+        "previousSeries": "Série précédente (Ctrl + flèche gauche)"
+      },
+      "labels": {
+        "wlPresetT1": "T1",
+        "wlPresetT2": "T2",
+        "wlPresetPD": "DP",
+        "wlPresetSoft": "Partie molle",
+        "wlPresetBone": "Os",
+        "wlPresetLung": "Poumon",
+        "wlPresetSkullBrain": "Crâne-cerveau",
+        "wlPresetSkullBase": "Base du crâne",
+        "wlPresetLiver": "Foie",
+        "localizers": "Localisateurs",
+        "demographics": "Libellé d'image",
+        "cineSlider": "Barre Cine",
+        "ruler": "Règle",
+        "ecgReport": "Analyse de l'ECG",
+        "annotations": "Annotations",
+        "annotationsUncertainties": "Imprécisions de mesure",
+        "mprMode": "Mode",
+        "mprThickness": "Épaisseur",
+        "mprLayout": "Disposition",
+        "mprWith3D": "Avec 3D",
+        "mprWithout3D": "Sans 3D",
+        "mpr3DProjection": "Projection",
+        "3dClipping": {
+          "label": "Découpage",
+          "none": "Désactivé",
+          "sphere": "Sphère",
+          "box": "Boîte"
+        },
+        "3dTransferfunctions": {
+          "dropdownLabel": "Fonction de transfert",
+          "default_ct": "Standard (CT)",
+          "bones": "Os",
+          "vessels": "Vaisseaux",
+          "skull": "Crâne",
+          "lung": "Poumon",
+          "soft": "Tissus mous"
+        },
+        "crosshair": "Réticule",
+        "wsiOverview": "Aperçu WSI",
+        "wsiTracking": "Suivi WSI",
+        "wsiNavigationMap": "Vue d'ensemble WSI"
+      }
+    },
+    "presentationStates": {
+      "presentationStates": "États de présentation",
+      "showOriginal": "Original",
+      "createPresentationState": "Créer un état de présentation",
+      "deletePresentationStateTitle": "Supprimer l'état de présentation",
+      "deletePresentationStateContent": "Êtes-vous sûr de vouloir supprimer l'état de présentation {{presentationStateTitle}} ?",
+      "title": "Créer un nouvel état de présentation",
+      "actions": {
+        "save": "Enregistrer",
+        "cancel": "Annuler",
+        "delete": "Supprimer"
+      },
+      "label": "Titre",
+      "errorMessage": "Saisissez un titre",
+      "saveSuccess": "L'état de présentation a été créé avec succès.",
+      "saveError": "L'état de présentation n'a pas pu être créé.",
+      "deleteSuccess": "L'état de présentation a été supprimé",
+      "deleteError": "L'état de présentation n'a pas pu être supprimé"
+    },
+    "wsiOverview": {
+      "label": "Étiquette",
+      "macro": "Macro",
+      "annotationGroups": "Annotations",
+      "defaultLayer": "Sans titre",
+      "annotationGroupsActions": {
+        "addLayer": "Ajouter un nouveau groupe",
+        "saveLayer": "Enregistrer le groupe",
+        "deleteLayer": "Supprimer le groupe",
+        "exitEditing": "Annuler",
+        "noLayers": "Il n'existe actuellement aucun groupe d'annotation.",
+        "edit": "Éditer le groupe"
+      },
+      "fluorescence": "Fluorescence",
+      "fluorescenceChannels": {
+        "illuminationWavelenght": "Longueur d'onde lumineuse :",
+        "nanometers": "nm",
+        "maxValue": "Max",
+        "minValue": "Min",
+        "valuesOfInterest": "Valeurs d'intérêt",
+        "opacity": "Opacité",
+        "saveChannel": "Enregistrer le canal",
+        "revertChannel": "Réinitialiser le canal",
+        "exitEditing": "Annuler",
+        "edit": "Modifier le canal"
+      },
+      "rotateRight": "Faire pivoter de 90° dans le sens horaire",
+      "rotateLeft": "Faire pivoter de 90° dans le sens anti-horaire",
+      "zoomInOut": "Zoom avant/arrière",
+      "measurementAbbreviations": {
+        "area": "Z:",
+        "diameter": "d:",
+        "perimeter": "p:"
+      }
+    }
+  },
+  "listViewer": {
+    "searchBox": {
+      "nameOrPid": {
+        "placeholder": "Nom ou IPP"
+      },
+      "dateOfBirth": {
+        "placeholder": "Date de naissance"
+      },
+      "modalities": {
+        "allModalities": "Toutes les modalités",
+        "oneModality": "modalité",
+        "multipleModalities": "modalités"
+      },
+      "archives": {
+        "allArchives": "Toutes les archives",
+        "oneArchive": "archive",
+        "multipleArchives": "archives"
+      },
+      "callingAET": {
+        "allCallingAET": "Tous les Calling AET",
+        "oneCallingAET": "Calling AET",
+        "multipleCallingAET": "Calling AET"
+      },
+      "date": {
+        "placeholder": {
+          "studyDate": "Date de l'examen",
+          "deletionDate": "Date de suppression",
+          "fromDate": "de",
+          "toDate": "à"
+        },
+        "today": "Aujourd'hui",
+        "last7Days": "Les 7 derniers jours",
+        "last30Days": "Les 30 derniers jours"
+      },
+      "search": "Recherche",
+      "issuer": {
+        "placeholder": "Émetteur de l'IPP"
+      },
+      "studyInstanceUID": {
+        "placeholder": "UID d'examen"
+      },
+      "accessionNumber": {
+        "placeholder": "Numéro de demande"
+      },
+      "studiesSelect": {
+        "allStudies": "Tous les examens",
+        "unlinkedStudies": "Examens non associés",
+        "deletionLockStudies": "Examens avec blocage de suppression"
+      }
+    },
+    "searchFilter": {
+      "searchFor": "Recherche de",
+      "resetFilters": "Réinitialiser tous les filtres de recherche",
+      "results": {
+        "noResult": "résultat",
+        "oneResult": "résultat",
+        "multipleResults": "résultats"
+      },
+      "badges": {
+        "patient": "Patient",
+        "dateOfBirth": "Date de naissance",
+        "studyDate": "Date de l'examen",
+        "modality": "Modalité",
+        "archive": "Archive",
+        "studyInstanceUID": "UID d'examen",
+        "accessionNumber": "Numéro de demande",
+        "callingAET": "Calling AET",
+        "issuerOfPatientID": "Émetteur de l'IPP",
+        "studies": "Examens",
+        "deletionDate": "Date de suppression"
+      },
+      "deletedResults": {
+        "noResult": "examens supprimés",
+        "oneResult": "examen supprimé",
+        "multipleResults": "examens supprimés"
+      }
+    },
+    "searchResults": {
+      "noPatientsFound": {
+        "title": "Aucune donnée patient n'est disponible",
+        "content": "Aucun patient ne correspond à votre recherche."
+      },
+      "nothingToShow": {
+        "title": "Rien à afficher",
+        "content": "Effectuez une recherche pour afficher des patients."
+      },
+      "oneAdditionalStudy": "autre examen",
+      "multipleAdditionalStudies": "autres examens",
+      "oneAdditionalDocument": "autre document",
+      "multipleAdditionalDocuments": "autres documents",
+      "studyBadge": "Examens",
+      "documentBadge": "Documents",
+      "administerStudie": "Administration de l'examen",
+      "deleteStudy": "Supprimer l'examen",
+      "restoreStudy": "Restaurer l'examen",
+      "deletePermanently": "Supprimer définitivement l'examen",
+      "noSearchResults": "Il n'y a pas de documents disponibles pour la visionneuse pour ce patient.",
+      "accNrShort": "N° d'accès"
+    },
+    "studyActionBar": {
+      "selectAllSearchResultsOfMalePatient": "Sélectionner tous les résultats du patient",
+      "selectAllSearchResultsOfFemalePatient": "Sélectionner tous les résultats de la patiente",
+      "selectAllSearchResultsOfUnknownGenderPatient": "Sélectionner tous les résultats du/de la patient(e)",
+      "selectAllSearchResultsOfMultiplePatients": "Sélectionner tous les résultats du patient",
+      "oneStudyCount": "examen",
+      "multipleStudiesCount": "examens",
+      "oneDocumentCount": "document",
+      "multipleDocumentsCount": "documents",
+      "oneSelected": "sélectionné",
+      "multipleSelected": "sélectionnés",
+      "shareStudies": "Partager les examens",
+      "view": "Afficher",
+      "addToViewer": "Ajouter à la visionneuse"
+    },
+    "trashActionBar": {
+      "emptyTrash": "Vider la corbeille",
+      "restore": "Restaurer",
+      "deletePermanently": "Supprimer définitivement",
+      "selectAllSearchResultsOfMalePatient": "Sélectionner tous les résultats du patient",
+      "selectAllSearchResultsOfFemalePatient": "Sélectionner tous les résultats de la patiente",
+      "selectAllSearchResultsOfUnknownGenderPatient": "Sélectionner tous les résultats du/de la patient(e)",
+      "selectAllSearchResultsOfMultiplePatients": "Sélectionner tous les résultats des patients",
+      "oneStudyCount": "examen",
+      "multipleStudiesCount": "examens",
+      "oneSelected": "sélectionné",
+      "multipleSelected": "sélectionnés"
+    },
+    "shareStudies": {
+      "confirmation": {
+        "title": "Autoriser les examens dans la Patient XCare Suite ?",
+        "accept": "Autoriser",
+        "cancel": "Annuler",
+        "contentMultipleStudies": "Êtes-vous sûr(e) de vouloir autoriser ces examens {{numberOfStudies}} dans la Patient XCare Suite ?",
+        "contentSingleStudy": "Êtes-vous sûr(e) de vouloir autoriser cet examen dans la Patient XCare Suite ?"
+      },
+      "response": {
+        "success": "Les examens ont été autorisés avec succès.",
+        "error": "En raison de problèmes techniques, le partage d'examens n'est actuellement pas possible.",
+        "patientNotFound": "Les examens n'ont pas pu être autorisés, car le/la patient(e) n'a pas été trouvé(e) dans la Patient XCare Suite.",
+        "partial": {
+          "title": "Tous les examens n'ont pas pu être autorisés",
+          "successOneStudy": "L'examen suivant a pu être autorisé avec succès :",
+          "successMultipleStudies": "Les examens suivants ont pu être autorisés avec succès :",
+          "errorOneStudy": "L'examen suivant n'a pas pu être autorisé :",
+          "errorMultipleStudies": "Les examens suivants n'ont pas pu être autorisés :",
+          "fromDate": "du",
+          "close": "Fermer"
+        }
+      }
+    },
+    "deleteStudy": {
+      "response": {
+        "success": "L'examen a été déplacé dans la corbeille.",
+        "error": "L'examen n'a pas pu être déplacé dans la corbeille.",
+        "notFound": "L'examen n'a pas pu être déplacé dans la corbeille car il n'a pas été trouvé.",
+        "forbidden": "Vous n'avez pas l'autorisation de déplacer cet examen dans la corbeille."
+      }
+    },
+    "restoreStudy": {
+      "confirmation": {
+        "title": {
+          "singleStudy": "Restaurer l'examen ?",
+          "multipleStudies": "Restaurer les examens ?"
+        },
+        "accept": "Restaurer",
+        "cancel": "Annuler",
+        "content": {
+          "singleStudy": "Souhaitez-vous restaurer l'examen ?",
+          "multipleStudies": "Souhaitez-vous restaurer les examens ?"
+        }
+      },
+      "response": {
+        "success": {
+          "singleStudy": "L'examen a été restauré avec succès.",
+          "multipleStudies": "Les examens ont été restaurés avec succès."
+        },
+        "error": {
+          "singleStudy": "Échec de la restauration de l'examen sélectionné.",
+          "multipleStudies": "Échec de la restauration des examens sélectionnés."
+        }
+      }
+    },
+    "emptyTrash": {
+      "confirmation": {
+        "title": "Supprimer les examens ?",
+        "accept": "Supprimer",
+        "cancel": "Annuler",
+        "content": "Souhaitez-vous supprimer définitivement tous les examens de la corbeille ?"
+      },
+      "response": {
+        "success": "Tous les examens de la corbeille ont été définitivement supprimés.",
+        "error": "Les examens de la corbeille n'ont pas pu être supprimés."
+      }
+    },
+    "deletePermanently": {
+      "confirmation": {
+        "title": {
+          "singleStudy": "Supprimer l'examen définitivement ?",
+          "multipleStudies": "Supprimer les examens définitivement ?"
+        },
+        "accept": "Supprimer",
+        "cancel": "Annuler",
+        "content": {
+          "singleStudy": "Souhaitez-vous supprimer définitivement l'examen ?",
+          "multipleStudies": "Souhaitez-vous supprimer définitivement les examens ?"
+        }
+      },
+      "response": {
+        "success": {
+          "singleStudy": "L'examen a été supprimé définitivement.",
+          "multipleStudies": "Les examens ont été supprimés définitivement."
+        },
+        "error": {
+          "singleStudy": "L'examen n'a pas pu être supprimé.",
+          "multipleStudies": "Les examens n'ont pas pu être supprimés."
+        }
+      }
+    },
+    "patientMerge": {
+      "mergeConfirmation": {
+        "title": "Fusion temporaire de patients",
+        "content": "Souhaitez-vous fusionner temporairement les examens sélectionnés ?",
+        "actions": {
+          "confirm": "Fusionner",
+          "cancel": "Annuler"
+        }
+      },
+      "addContentConfirmation": {
+        "title": "Fusion temporaire de patients",
+        "contentOneStudy": "Souhaitez-vous ajouter temporairement l'examen sélectionné au patient déjà chargé ?",
+        "contentMultipleStudies": "Souhaitez-vous ajouter temporairement les examens sélectionnés au patient déjà chargé ?",
+        "actions": {
+          "confirm": "Ajouter",
+          "cancel": "Annuler"
+        }
+      }
+    },
+    "chatbot": {
+      "initialMessage": "Questions sur DeepUnity Viewer"
+    }
+  },
+  "administration": {
+    "navigationModal": {
+      "title": "Quitter la section Administration ?",
+      "content": "Si vous quittez la section Administration, les modifications non enregistrées seront perdues.",
+      "actions": {
+        "abandon": "Quitter",
+        "cancel": "Annuler"
+      }
+    },
+    "deletionModal": {
+      "title": "L'examen a été supprimé.",
+      "content": "L'examen que vous avez ouvert a été supprimé. Vous allez maintenant être renvoyé à la recherche d'examens.",
+      "actions": {
+        "confirm": "OK"
+      }
+    }
+  }
+}

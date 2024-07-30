@@ -1,0 +1,14 @@
+{
+  "intlNumber": "{{ val, number(useGrouping: always) }}",
+  "area": "A",
+  "average": "M",
+  "circumference": "C",
+  "diameter": "D",
+  "isotropic": "isotrópico",
+  "standardDeviation": "SD",
+  "pix": "pix",
+  "mm": "mm",
+  "mm_prj": "mm (pry)",
+  "mm_est": "mm (pry/est)",
+  "mm_approx": "mm (aprox)"
+}

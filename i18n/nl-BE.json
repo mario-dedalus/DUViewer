@@ -1,0 +1,665 @@
+{
+  "common": {
+    "close": "Sluiten",
+    "loading": "Laden...",
+    "closing": "Sluiten...",
+    "testPurposesOnly": "Niet voor klinisch gebruik",
+    "noDiagnosticUse": "Niet voor diagnostisch gebruik",
+    "reducedQuality": "Verminderde beeldkwaliteit",
+    "unknown": "Onbekend",
+    "id": "ID",
+    "warning": "Waarschuwing",
+    "tooltips": {
+      "help": "Help",
+      "about": "Over DeepUnity Viewer",
+      "logout": "Afmelden",
+      "warningLowImageQuality": "Beelden worden met verminderde kwaliteit weergegeven.",
+      "warningMobile": "Niet toegestaan voor verslaggeving op mobiele apparaten."
+    },
+    "aboutBox": {
+      "title": "Systeeminformatie",
+      "version": "Versie",
+      "build": "Build",
+      "thirdPartySoftware": "Gebruikte software van derden",
+      "internalSoftware": "Gebruikte interne software"
+    },
+    "tabs": {
+      "search": "Zoeken",
+      "viewer": "Viewer",
+      "administration": "Beheer",
+      "studySearch": "Zoeken",
+      "trashSearch": "Prullenbak"
+    },
+    "dicomExport": {
+      "loading": "Onderzoeken worden verzonden",
+      "sendButton": "Onderzoeken verzenden",
+      "modal": {
+        "title": "Onderzoeken verzenden",
+        "sendButton": "Verzenden",
+        "cancel": "Annuleren",
+        "studiesLocation": "Waar moeten de onderzoeken naartoe wordt verzonden?",
+        "targetArchive": "Doelarchief:",
+        "selectTargetArchive": "Doelarchief selecteren",
+        "chooseStudies": "Selecteer de onderzoeken die moeten worden verzonden:",
+        "allStudies": "Alle beschikbare onderzoeken selecteren"
+      }
+    }
+  },
+  "error": {
+    "emptySeries": {
+      "title": "De serie kon niet worden geladen.",
+      "content": "Er zijn momenteel geen beeldgegevens voor deze serie. Probeer het later nog eens."
+    },
+    "404NoPatientData": {
+      "title": "De patiënt kon niet worden geladen.",
+      "content": "Er zijn nog geen beeldgegevens voor de opgevraagde patiënt. Probeer het later nog eens."
+    },
+    "500ServerError": {
+      "title": "Fout bij het laden van de onderzoeken (500 - serverfout)",
+      "content": "Bij het laden van de onderzoeken is er een fout opgetreden op de server."
+    },
+    "503ServerOverloaded": {
+      "title": "Fout bij het laden van de onderzoeken (503 - server overbelast)",
+      "content": "Er is een fout opgetreden bij het laden van de onderzoeken. De server is overbelast."
+    },
+    "noListViewerPermission": {
+      "title": "Geen rechten om naar patiënten te zoeken",
+      "content": "U beschikt niet over de nodige rechten om patiënten te zoeken en wordt nu uitgelogd."
+    },
+    "contextCallFailed": {
+      "title": "Contextoproep mislukt",
+      "content": "Het opgegeven token is ongeldig."
+    },
+    "contextCallTooManyPatients": {
+      "title": "Contextoproep mislukt",
+      "content": "Het openen van onderzoeken van meer dan twee patiënten is niet toegestaan."
+    },
+    "authFailed": {
+      "title": "Authenticatie mislukt",
+      "content": "Controleer de configuratie van de authenticatieserver."
+    },
+    "sessionExpired": {
+      "title": "Sessie verlopen",
+      "content": "Uw sessie is verlopen. Open het onderzoek opnieuw om een nieuwe sessie te starten."
+    },
+    "unlicensed": {
+      "title": "Licentiefout",
+      "content": "De licentie die nodig is om de DU Viewer te gebruiken is niet beschikbaar."
+    },
+    "invalidLicenses": {
+      "title": "Licentiefout",
+      "content": "Er werden verkeerde licenties ingevoerd."
+    },
+    "noViewingLicenses": {
+      "title": "Licentiefout",
+      "content": "Er zijn geen licenties beschikbaar voor het ophalen van patiëntgegevens."
+    },
+    "default": {
+      "title": "Fout bij het laden van de onderzoeken (server niet bereikbaar)",
+      "content": "Er is een fout opgetreden bij het laden van de onderzoeken. De server is niet beschikbaar."
+    },
+    "serverNotAvailable": "{{serverName}} is niet beschikbaar",
+    "okButtonLabel": "OK",
+    "viewportErrorMessage": "Gegevens kunnen niet worden weergegeven.",
+    "imageLoadingError": "Beeld kan niet worden weergegeven."
+  },
+  "notification": {
+    "noImagesForLoadedStudies": "Er zijn geen beeldgegevens beschikbaar voor de opgeroepen onderzoeken.",
+    "notAllStudiesLoaded": "Niet alle onderzoeken konden worden geladen.",
+    "volumeAccessFailed": "Het volume kon niet worden geladen. MPR is beëindigd.",
+    "volumeLoadingFailed": "Het volume kon niet volledig worden geladen. MPR is beëindigd.",
+    "volumeConstructionFailed": "Het volume kon niet worden opgebouwd. MPR is beëindigd.",
+    "volumeSizeReduced": {
+      "message": "Het volume is groter dan wat door de browser kan worden weergegeven en is daarom verkleind.",
+      "sliceSpacing": "Afstand tussen coupes: ",
+      "sliceThickness": "Coupedikte: "
+    },
+    "snapshotSendingSuccess": "Screenshot verzenden is gelukt.",
+    "snapshotSendingFailed": "Screenshot kon niet worden verzonden.",
+    "portraitMode": "Gebruik de viewer alleen in liggend formaat.",
+    "dicomExport": {
+      "success": {
+        "singleStudy": "Het onderzoek is verzonden.",
+        "multipleStudies": "De onderzoeken zijn verzonden."
+      },
+      "exportFailed": "Door technische problemen is het momenteel niet mogelijk om onderzoeken te verzenden.",
+      "partiallyFailed": "Niet alle onderzoeken konden worden verzonden.",
+      "moreInfo": "Meer informatie",
+      "summaryModal": {
+        "forbidden": "De rechten ontbreken om het onderzoek te verzenden.",
+        "failedRetry": "Dit onderzoek is al geüpload.",
+        "notFound": "Het onderzoek bestaat niet meer.",
+        "wrongRequestParam": "Dit onderzoek kon niet worden verzonden omdat de verkeerde parameters waren opgegeven.",
+        "technicalIssues": "Om technische redenen kan dit onderzoek niet worden verzonden.",
+        "title": "Foutmelding",
+        "successfulList": {
+          "singleStudy": "Het volgende onderzoek is verzonden:",
+          "multipleStudies": "De volgende onderzoeken zijn verzonden:"
+        },
+        "failedList": {
+          "singleStudy": "Het volgende onderzoek kon niet worden verzonden:",
+          "multipleStudies": "De volgende onderzoeken konden niet worden verzonden:"
+        }
+      }
+    }
+  },
+  "prompts": {
+    "enterText": "Hier tekst invoeren"
+  },
+  "imageViewer": {
+    "export": {
+      "title": "Exporteren",
+      "chooseViewports": "Selecteer de viewports die u wilt exporteren.",
+      "chooseAll": "Alles selecteren",
+      "noViewportSelected": "viewports geselecteerd",
+      "oneViewportSelected": "viewport geselecteerd",
+      "multipleViewportsSelected": "viewports geselecteerd",
+      "display": "Weergeven",
+      "annotationsAndMeasurements": "Annotaties en metingen",
+      "demographics": "Demografische gegevens",
+      "sendSnapshot": "Verzenden naar: ",
+      "saveImage": "Beeld opslaan",
+      "printLocally": "Lokaal afdrukken"
+    },
+    "sendSnapshot": {
+      "title": "Screenshot verzenden",
+      "label": "Titel",
+      "actions": {
+        "send": "Verzenden",
+        "cancel": "Annuleren"
+      },
+      "successMessage": "Screenshot verzenden is gelukt.",
+      "errorMessage": "Screenshot kon niet worden verzonden."
+    },
+    "dicomViewport": {
+      "emptyViewport": "LEEG",
+      "demographics": {
+        "patientIdAbbr": "PatID",
+        "gspsAbbr": "PR",
+        "sequenceNrAbbr": "SeqNr",
+        "imageNrAbbr": "BeeldNr",
+        "accessionNr": "AccNr"
+      },
+      "iconTooltips": {
+        "warningRotatedOrMirrored": "Beeld is gedraaid of gespiegeld",
+        "warningLinkingFallback": "Enkel beeld-per-beeld synchronisatie",
+        "warningGspsNotApplicable": "Vensterniveau van PR is inconsistent",
+        "warningLossyImage": "Beeld is verlieslatend",
+        "undoLinkingTooltip": "Synchronisatie uitschakelen",
+        "secondaryCaptureImageTooltip": "Secondary Capture",
+        "warningProcessingOnly": "Alleen voor verwerking"
+      },
+      "cineMode": {
+        "warningFrameRate": "De afspeelsnelheid is lager dan verwacht.",
+        "frameRateTooltip": "Afspeelsnelheid"
+      }
+    },
+    "wsiViewport": {
+      "iconTooltips": {
+        "warningFluorescence": "Niet voor diagnostisch gebruik"
+      }
+    },
+    "dicom3dViewport": {
+      "demographics": {
+        "mprMode": "Modus",
+        "mprThickness": "Coupedikte"
+      },
+      "iconTooltips": {
+        "maximizeVolumeTooltip": "Maximaliseren",
+        "minimizeVolumeTooltip": "Naar de oorspronkelijke weergave"
+      }
+    },
+    "videoViewport": {
+      "noBrowserSupport": "Uw browser ondersteunt geen HTML-video's."
+    },
+    "patientToolbar": {
+      "multiplePatientsDisplayed": "Er worden meerdere patiënten weergegeven.",
+      "attention": "Opgelet!",
+      "name": "Naam",
+      "dateOfBirth": "Geboortedatum",
+      "qualitySwitchLabel": "DICOM"
+    },
+    "sidebar": {
+      "tabImages": "Onderzoeken",
+      "tabDocuments": "Documenten"
+    },
+    "seriesPalette": {
+      "noThumbnail": "Er zijn geen beelden beschikbaar.",
+      "tooltips": {
+        "expand": "Seriepalet tonen",
+        "collapse": "Seriepalet verbergen",
+        "firstReader": "Bekeken door {{userName}} op {{datum}} om {{tijd}}"
+      }
+    },
+    "reportViewport": {
+      "loadingError": "Fout bij het laden",
+      "tooltips": {
+        "hideReport": "Verslag verbergen"
+      }
+    },
+    "topToolbar": {
+      "tooltips": {
+        "wlPresets": "Standaard vensterwaarden selecteren",
+        "rotate": "Draaien of spiegelen",
+        "revert": "Specifieke beeldwijzigingen resetten",
+        "pan": "Verplaatsen (spatiebalk + linkermuisknop)",
+        "zoom": "Zoomen (spatiebalk + muiswiel)",
+        "zoomPan": "Zoomen en verplaatsen",
+        "windowLevel": "Vensterniveau (rechtermuisknop)",
+        "invert": "Inverteren",
+        "rotateFree": "Vrij roteren",
+        "rotateC90": "90° rechtsom roteren",
+        "rotateCC90": "90° linksom roteren",
+        "rotateC180": "180° roteren",
+        "mirrorHorizontal": "Horizontaal spiegelen",
+        "mirrorVertical": "Verticaal spiegelen",
+        "revertAll": "Alle beeldwijzigingen resetten",
+        "revertPanZoom": "Verplaatsing of zoom resetten",
+        "revertWLInvert": "Vensterniveau of inverteren resetten",
+        "revertRotateMirror": "Rotatie of spiegeling resetten",
+        "text": "Tekst",
+        "arrow": "Pijl",
+        "length": "Afstandsmeting",
+        "cobbAngle": "Hoekmeting",
+        "rectangle": "Rechthoek",
+        "circle": "Cirkel",
+        "count": "Teller",
+        "freehand": "Vrije hand",
+        "polygon": "Polygoon",
+        "wlPresetT1": "C/W 300/700",
+        "wlPresetT2": "C/W 155/475",
+        "wlPresetPD": "C/W 420/920",
+        "wlPresetSoft": "C/W 50/350",
+        "wlPresetBone": "C/W 400/1800",
+        "wlPresetLung": "C/W -500/1500",
+        "wlPresetSkullBrain": "C/W 40/80",
+        "wlPresetSkullBase": "C/W 40/1800",
+        "wlPresetLiver": "C/W 40/150",
+        "link": "Series synchroniseren",
+        "mpr": "Multiplanaire reconstructie",
+        "export": "Exporteren",
+        "keyImages": "Belangrijke beelden",
+        "layouts": {
+          "dropdown": "Weergave-layouts",
+          "2D-1x1": "Weergave-layout 1x1",
+          "2D-2x1": "Weergave-layout 2x1",
+          "2D-1x2": "Weergave-layout 1x2",
+          "2D-2x2": "Weergave-layout 2x2",
+          "2D-H2/1": "Weergave-layout H2/1",
+          "2D-H1/2": "Weergave-layout H1/2",
+          "2D-V2/1": "Weergave-layout V2/1",
+          "2D-V1/2": "Weergave-layout V1/2"
+        },
+        "toggleVisibility": "Tonen of verbergen",
+        "ecg": {
+          "ecgMeasurement": "ECG-meetinstrument",
+          "rrMeasurement": "R2R-instrument",
+          "ecgHeart": "ECG-instellingen",
+          "ecgSetting": {
+            "layout": "Lay-out",
+            "timeResolution": "Tijdschaal",
+            "voltage": "Spanningsschaal",
+            "frequency": "Filterfrequentie"
+          }
+        },
+        "nextSeries": "Volgende serie (Ctrl + pijl naar rechts)",
+        "previousSeries": "Vorige serie (Ctrl + pijl naar links)"
+      },
+      "labels": {
+        "wlPresetT1": "T1",
+        "wlPresetT2": "T2",
+        "wlPresetPD": "PD",
+        "wlPresetSoft": "Weke delen",
+        "wlPresetBone": "Botten",
+        "wlPresetLung": "Long",
+        "wlPresetSkullBrain": "Hersenen",
+        "wlPresetSkullBase": "Schedelbasis",
+        "wlPresetLiver": "Lever",
+        "localizers": "Lokalisator",
+        "demographics": "Demografische gegevens",
+        "cineSlider": "Filmbalk",
+        "ruler": "Meetlat",
+        "ecgReport": "ECG-verslag",
+        "annotations": "Annotaties",
+        "annotationsUncertainties": "Meetonzekerheden",
+        "mprMode": "Modus",
+        "mprThickness": "Dikte",
+        "mprLayout": "Lay-out",
+        "mprWith3D": "Met 3D",
+        "mprWithout3D": "Zonder 3D",
+        "mpr3DProjection": "Projectie",
+        "3dClipping": {
+          "label": "Bijsnijden",
+          "none": "Uit",
+          "sphere": "Bol",
+          "box": "Box"
+        },
+        "3dTransferfunctions": {
+          "dropdownLabel": "Transferfunctie",
+          "default_ct": "Standaard (CT)",
+          "bones": "Botten",
+          "vessels": "Bloedvaten",
+          "skull": "Schedel",
+          "lung": "Long",
+          "soft": "Weke delen"
+        },
+        "crosshair": "Kruishaar",
+        "wsiOverview": "WSI-overzicht",
+        "wsiTracking": "WSI-tracking",
+        "wsiNavigationMap": "WSI-overzichtsbeeld"
+      }
+    },
+    "presentationStates": {
+      "presentationStates": "Presentatiestatussen",
+      "showOriginal": "Origineel",
+      "createPresentationState": "Presentatiestatus maken",
+      "deletePresentationStateTitle": "Presentatiestatus wissen",
+      "deletePresentationStateContent": "Bent u zeker dat u de presentatiestatus {{presentationStateTitle}} wilt verwijderen?",
+      "title": "Een nieuwe presentatiestatus maken",
+      "actions": {
+        "save": "Opslaan",
+        "cancel": "Annuleren",
+        "delete": "Wissen"
+      },
+      "label": "Titel",
+      "errorMessage": "Voer een titel in.",
+      "saveSuccess": "De presentatiestatus is met succes aangemaakt.",
+      "saveError": "De presentatiestatus kon niet worden aangemaakt.",
+      "deleteSuccess": "De presentatiestatus is gewist.",
+      "deleteError": "De presentatiestatus kon niet worden verwijderd."
+    },
+    "wsiOverview": {
+      "label": "Label",
+      "macro": "Macro",
+      "annotationGroups": "Annotaties",
+      "defaultLayer": "Zonder titel",
+      "annotationGroupsActions": {
+        "addLayer": "Nieuwe groep toevoegen",
+        "saveLayer": "Groep opslaan",
+        "deleteLayer": "Groep wissen",
+        "exitEditing": "Annuleren",
+        "noLayers": "Er zijn momenteel geen annotatiegroepen.",
+        "edit": "Groep bewerken"
+      },
+      "fluorescence": "Fluorescentie",
+      "fluorescenceChannels": {
+        "illuminationWavelenght": "Golflengte verlichting:",
+        "nanometers": "nm",
+        "maxValue": "Max.",
+        "minValue": "Min.",
+        "valuesOfInterest": "Waarden van belang",
+        "opacity": "Opaciteit",
+        "saveChannel": "Kanaal opslaan",
+        "revertChannel": "Kanaal resetten",
+        "exitEditing": "Annuleren",
+        "edit": "Kanaal bewerken"
+      },
+      "rotateRight": "90° rechtsom roteren",
+      "rotateLeft": "90° linksom roteren",
+      "zoomInOut": "In-/uitzoomen",
+      "measurementAbbreviations": {
+        "area": "A:",
+        "diameter": "d:",
+        "perimeter": "p:"
+      }
+    }
+  },
+  "listViewer": {
+    "searchBox": {
+      "nameOrPid": {
+        "placeholder": "Naam of PID"
+      },
+      "dateOfBirth": {
+        "placeholder": "Geboortedatum"
+      },
+      "modalities": {
+        "allModalities": "Alle modaliteiten",
+        "oneModality": "modaliteit",
+        "multipleModalities": "modaliteiten"
+      },
+      "archives": {
+        "allArchives": "Alle bestanden",
+        "oneArchive": "bestand",
+        "multipleArchives": "bestanden"
+      },
+      "callingAET": {
+        "allCallingAET": "Alle Calling AET",
+        "oneCallingAET": "Calling AET",
+        "multipleCallingAET": "Calling AET"
+      },
+      "date": {
+        "placeholder": {
+          "studyDate": "Onderzoeksdatum",
+          "deletionDate": "Verwijderingsdatum",
+          "fromDate": "Van",
+          "toDate": "Tot"
+        },
+        "today": "Vandaag",
+        "last7Days": "Laatste 7 dagen",
+        "last30Days": "Laatste 30 dagen"
+      },
+      "search": "Zoeken",
+      "issuer": {
+        "placeholder": "Uitgever van PID"
+      },
+      "studyInstanceUID": {
+        "placeholder": "Onderzoek-UID"
+      },
+      "accessionNumber": {
+        "placeholder": "Accession nummer"
+      },
+      "studiesSelect": {
+        "allStudies": "Alle onderzoeken",
+        "unlinkedStudies": "Niet-gekoppelde onderzoeken",
+        "deletionLockStudies": "Onderzoeken met verwijderingsslot"
+      }
+    },
+    "searchFilter": {
+      "searchFor": "Zoeken naar",
+      "resetFilters": "Alle zoekfilters resetten",
+      "results": {
+        "noResult": "resultaten",
+        "oneResult": "resultaat",
+        "multipleResults": "resultaten"
+      },
+      "badges": {
+        "patient": "Patiënt",
+        "dateOfBirth": "Geboortedatum",
+        "studyDate": "Onderzoeksdatum",
+        "modality": "Modaliteit",
+        "archive": "Bestand",
+        "studyInstanceUID": "Onderzoek-UID",
+        "accessionNumber": "Accession nummer",
+        "callingAET": "Calling AET",
+        "issuerOfPatientID": "Uitgever van PID",
+        "studies": "Onderzoeken",
+        "deletionDate": "Verwijderingsdatum"
+      },
+      "deletedResults": {
+        "noResult": "gewiste onderzoeken",
+        "oneResult": "gewist onderzoek",
+        "multipleResults": "gewiste onderzoeken"
+      }
+    },
+    "searchResults": {
+      "noPatientsFound": {
+        "title": "Geen patiëntgegevens beschikbaar",
+        "content": "Er zijn helaas geen patiënten gevonden die aan uw zoekcriteria voldoen."
+      },
+      "nothingToShow": {
+        "title": "Niets om weer te geven",
+        "content": "Voer een zoekopdracht in om patiënten weer te geven."
+      },
+      "oneAdditionalStudy": "aanvullend onderzoek",
+      "multipleAdditionalStudies": "aanvullende onderzoeken",
+      "oneAdditionalDocument": "aanvullend document",
+      "multipleAdditionalDocuments": "aanvullende documenten",
+      "studyBadge": "Onderzoeken",
+      "documentBadge": "Documenten",
+      "administerStudie": "Onderzoek beheren",
+      "deleteStudy": "Onderzoek wissen",
+      "restoreStudy": "Onderzoek herstellen",
+      "deletePermanently": "Onderzoek permanent wissen",
+      "noSearchResults": "Voor deze patiënt zijn er geen voor de viewer gedeelde documenten.",
+      "accNrShort": "AccNr"
+    },
+    "studyActionBar": {
+      "selectAllSearchResultsOfMalePatient": "Alle resultaten van de patiënt selecteren",
+      "selectAllSearchResultsOfFemalePatient": "Alle resultaten van de patiënt selecteren",
+      "selectAllSearchResultsOfUnknownGenderPatient": "Alle resultaten van de patiënt selecteren",
+      "selectAllSearchResultsOfMultiplePatients": "Alle resultaten van de patiënt selecteren",
+      "oneStudyCount": "onderzoek",
+      "multipleStudiesCount": "onderzoeken",
+      "oneDocumentCount": "document",
+      "multipleDocumentsCount": "documenten",
+      "oneSelected": "geselecteerd",
+      "multipleSelected": "geselecteerd",
+      "shareStudies": "Onderzoeken delen",
+      "view": "Weergeven",
+      "addToViewer": "Toevoegen aan viewer"
+    },
+    "trashActionBar": {
+      "emptyTrash": "Prullenbak leegmaken",
+      "restore": "Herstellen",
+      "deletePermanently": "Permanent wissen",
+      "selectAllSearchResultsOfMalePatient": "Alle resultaten van de patiënt selecteren",
+      "selectAllSearchResultsOfFemalePatient": "Alle resultaten van de patiënt selecteren",
+      "selectAllSearchResultsOfUnknownGenderPatient": "Alle resultaten van de patiënt selecteren",
+      "selectAllSearchResultsOfMultiplePatients": "Alle resultaten van de patiënt selecteren",
+      "oneStudyCount": "onderzoek",
+      "multipleStudiesCount": "onderzoeken",
+      "oneSelected": "geselecteerd",
+      "multipleSelected": "geselecteerd"
+    },
+    "shareStudies": {
+      "confirmation": {
+        "title": "Onderzoeken delen in de Patient XCare Suite?",
+        "accept": "Delen",
+        "cancel": "Annuleren",
+        "contentMultipleStudies": "Weet u zeker dat u deze {{numberOfStudies}} onderzoeken wilt delen in de Patient XCare Suite?",
+        "contentSingleStudy": "Bent u zeker dat u deze 1 studie wilt delen in de Patient XCare Suite?"
+      },
+      "response": {
+        "success": "De onderzoeken zijn gedeeld.",
+        "error": "Door technische problemen is het momenteel niet mogelijk om het onderzoek te delen.",
+        "patientNotFound": "De onderzoeken konden niet worden gedeeld omdat de patiënt niet werd gevonden in de Patient XCare Suite.",
+        "partial": {
+          "title": "Niet alle onderzoeken konden worden gedeeld.",
+          "successOneStudy": "Het volgende onderzoek is gedeeld:",
+          "successMultipleStudies": "De volgende onderzoeken zijn gedeeld:",
+          "errorOneStudy": "Het volgende onderzoek kon niet worden gedeeld:",
+          "errorMultipleStudies": "De volgende onderzoeken konden niet worden gedeeld:",
+          "fromDate": "van",
+          "close": "Sluiten"
+        }
+      }
+    },
+    "deleteStudy": {
+      "response": {
+        "success": "Het onderzoek is naar de prullenbak verplaatst.",
+        "error": "Het onderzoek kon niet naar de prullenbak worden verplaatst.",
+        "notFound": "Het onderzoek kon niet naar de prullenbak worden verplaatst, omdat het niet werd gevonden.",
+        "forbidden": "U bent niet gemachtigd om dit onderzoek naar de prullenbak te verplaatsen."
+      }
+    },
+    "restoreStudy": {
+      "confirmation": {
+        "title": {
+          "singleStudy": "Onderzoek herstellen?",
+          "multipleStudies": "Onderzoeken herstellen?"
+        },
+        "accept": "Herstellen",
+        "cancel": "Annuleren",
+        "content": {
+          "singleStudy": "Wilt u het onderzoek herstellen?",
+          "multipleStudies": "Wilt u de onderzoeken herstellen?"
+        }
+      },
+      "response": {
+        "success": {
+          "singleStudy": "Het onderzoek werd met succes hersteld.",
+          "multipleStudies": "De onderzoeken werden met succes hersteld."
+        },
+        "error": {
+          "singleStudy": "Het onderzoek kon niet worden hersteld.",
+          "multipleStudies": "De onderzoeken konden niet worden hersteld."
+        }
+      }
+    },
+    "emptyTrash": {
+      "confirmation": {
+        "title": "Onderzoeken wissen?",
+        "accept": "Wissen",
+        "cancel": "Annuleren",
+        "content": "Wilt u alle onderzoeken in de prullenbak permanent wissen?"
+      },
+      "response": {
+        "success": "Alle onderzoeken in de prullenbak zijn permanent gewist.",
+        "error": "De onderzoeken in de prullenbak konden niet worden gewist."
+      }
+    },
+    "deletePermanently": {
+      "confirmation": {
+        "title": {
+          "singleStudy": "Onderzoek permanent wissen?",
+          "multipleStudies": "Onderzoeken permanent wissen?"
+        },
+        "accept": "Wissen",
+        "cancel": "Annuleren",
+        "content": {
+          "singleStudy": "Wilt u het onderzoek definitief wissen?",
+          "multipleStudies": "Wilt u de onderzoeken definitief wissen?"
+        }
+      },
+      "response": {
+        "success": {
+          "singleStudy": "Het onderzoek is permanent gewist.",
+          "multipleStudies": "De onderzoeken zijn permanent gewist."
+        },
+        "error": {
+          "singleStudy": "Het onderzoek kon niet worden gewist.",
+          "multipleStudies": "De onderzoeken konden niet worden gewist."
+        }
+      }
+    },
+    "patientMerge": {
+      "mergeConfirmation": {
+        "title": "Tijdelijke samenvoeging van patiënten",
+        "content": "Wilt u de geselecteerde onderzoeken tijdelijk samenvoegen?",
+        "actions": {
+          "confirm": "Samenvoegen",
+          "cancel": "Annuleren"
+        }
+      },
+      "addContentConfirmation": {
+        "title": "Tijdelijke samenvoeging van patiënten",
+        "contentOneStudy": "Wilt u het geselecteerde onderzoek tijdelijk toevoegen aan de reeds geladen patiënt?",
+        "contentMultipleStudies": "Wilt u de geselecteerde onderzoeken tijdelijk toevoegen aan de reeds geladen patiënt?",
+        "actions": {
+          "confirm": "Toevoegen",
+          "cancel": "Annuleren"
+        }
+      }
+    },
+    "chatbot": {
+      "initialMessage": "Vragen over de DeepUnity Viewer"
+    }
+  },
+  "administration": {
+    "navigationModal": {
+      "title": "Beheer verlaten?",
+      "content": "Als u het onderdeel Beheer verlaat, gaan niet-opgeslagen wijzigingen verloren.",
+      "actions": {
+        "abandon": "Verlaten",
+        "cancel": "Annuleren"
+      }
+    },
+    "deletionModal": {
+      "title": "Het onderzoek is gewist.",
+      "content": "Het onderzoek dat u hebt geopend is gewist. U wordt terug naar het zoekscherm gebracht.",
+      "actions": {
+        "confirm": "OK"
+      }
+    }
+  }
+}
